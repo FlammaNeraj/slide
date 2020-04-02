@@ -153,7 +153,7 @@ export class Slide {
   }
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
@@ -182,7 +182,7 @@ export class SlideNav extends Slide {
 
   eventControl(item, index) {
     item.addEventListener('click', (event) => {
-      event.preventDefault;
+      event.preventDefault();
       this.changeSlide(index);
     });
     this.wrapper.addEventListener('changeEvent', this.activeControlItem);
